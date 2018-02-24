@@ -4,4 +4,4 @@
 - Jayanth Mohana Krishna
 - Ruturaj Eksambekar
 - Anushk Mittal
-- [https://samarth-robo.github.io/](Samarth Brahmbhatt)
+- [Samarth Brahmbhatt](https://samarth-robo.github.io/)
