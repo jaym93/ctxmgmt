@@ -5,3 +5,7 @@
 - Ruturaj Eksambekar
 - Anushk Mittal
 - [Samarth Brahmbhatt](https://samarth-robo.github.io/)
+
+## Setup
+1. Install [miniconda](https://conda.io/miniconda.html)
+2. Create the Conda environment: `conda env create -f environment.yml`
