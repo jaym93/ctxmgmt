@@ -5,19 +5,20 @@ var dynamodb = new doc.DynamoDB();
 exports.handler = function(event, context) {
     console.log("Request received:\n", JSON.stringify(event));
     console.log("Context received:\n", JSON.stringify(context));
-
     var tableName = "use-logger";
-    var item = {
-        "meta": event.meta,
-        "sno":  event.sno,
-        "what": event.what,
-        "when": event.when,
-        "where": {
-            "location": event.location,
-            "streetAddress": event.streetAddress
-        },
-        "who": event.who
-    };
+    var item = {};
+    var count = 0;
+    JSON.parse(JSON.stringify(event), (key, value) => {
+        count += 1;
+        if (count < 7) {
+            item[key] = value
+        }
+        console.log(key); // log the current property name, the last is "".
+        console.log(value);
+        console.log("done");
+        return value;     // return the unchanged property value.
+    });
+
     console.log("Item:\n", item);
 
     dynamodb.putItem({
