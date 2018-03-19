@@ -23,4 +23,4 @@ BODY:
 }
 ```
 
-All keys must be String except, `meta` and `where` which are a sub-map. `meta` is designed to handle ant random sub-JSON but `where` MUST have similar sub-json
+All keys must be String except, `meta` and `where` which are a sub-map. `meta` is designed to handle any random sub-JSON but `where` MUST have similar sub-json
