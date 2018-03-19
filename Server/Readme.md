@@ -1,10 +1,13 @@
 # Instructions
 
-## Sample JSON payload
+## POST Event
 
 Warning: Handle with caution! This is directly sent to dynamoDB matching keys with table rows. DO NOT DEVIATE
 
 ```
+URL: https://ao9kkk5kze.execute-api.us-east-1.amazonaws.com/testing/
+TYPE: POST
+BODY:
 {
   "meta": {
     "battery": "20%"
