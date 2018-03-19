@@ -3,7 +3,7 @@
 ## Team
 - Jayanth Mohana Krishna
 - Ruturaj Eksambekar
-- Anushk Mittal
+- [Anushk Mittal](http://anushk.me)
 - [Samarth Brahmbhatt](https://samarth-robo.github.io/)
 
 ## Setup
