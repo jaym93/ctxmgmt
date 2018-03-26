@@ -1,0 +1,44 @@
+{
+  "id": "6e76148b-5e57-4bb2-ac12-cef77042b733",
+  "name": "meta-info",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "9037f725-e098-4f42-a910-59c8219d5edf",
+          "required": false,
+          "dataType": "@device-name",
+          "name": "device-name",
+          "value": "$device-name",
+          "prompts": [],
+          "defaultValue": "#name-followup.device-name",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Ah I wish I knew more about the $device-name! That\u0027s all the information I have.",
+            "The $device-name has 50% battery.",
+            "The $device-name is left with just 10% battery.",
+            "There\u0027s 1 GB store left on the $device-name."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522082123,
+  "fallbackIntent": false,
+  "events": []
+}

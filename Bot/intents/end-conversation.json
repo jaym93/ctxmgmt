@@ -1,0 +1,32 @@
+{
+  "id": "4f948253-b540-4dd6-9a70-a1563f17f2a7",
+  "name": "end-conversation",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Glad I could help you.",
+            "I\u0027m always here to help you.",
+            "Goodbye."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522082420,
+  "fallbackIntent": false,
+  "events": []
+}

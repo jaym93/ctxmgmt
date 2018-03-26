@@ -1,0 +1,41 @@
+{
+  "id": "c819f257-a53d-4f0c-9af6-60648910c575",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Hi, I am here to help you manage your devices. I know everything.",
+            "Hey there, want to know about a device.? Worry not, I am here!",
+            "Hello! Let me know if you want to know about any devices in the Aware Home...",
+            "hey! Need a device? Let me know.",
+            "hi there! Want to know about a device? I am here to help."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522081271,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ]
+}
