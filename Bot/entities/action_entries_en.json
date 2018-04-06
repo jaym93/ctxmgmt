@@ -1,0 +1,26 @@
+[
+  {
+    "value": "used",
+    "synonyms": [
+      "used"
+    ]
+  },
+  {
+    "value": "kept",
+    "synonyms": [
+      "kept"
+    ]
+  },
+  {
+    "value": "left",
+    "synonyms": [
+      "left"
+    ]
+  },
+  {
+    "value": "lying",
+    "synonyms": [
+      "lying"
+    ]
+  }
+]

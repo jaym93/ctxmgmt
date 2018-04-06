@@ -1,0 +1,87 @@
+{
+  "id": "361b1ad5-1329-40c6-98b2-c2a3dbacff82",
+  "name": "search_device",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "name-followup",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "92aa37b1-015e-439c-aef9-33942f32e641",
+          "required": false,
+          "dataType": "@sys.unit-length",
+          "name": "unit-length",
+          "value": "$unit-length",
+          "isList": false
+        },
+        {
+          "id": "7c1a1fd6-8a3b-41a0-a365-4935740f27a7",
+          "required": false,
+          "dataType": "@sys.color",
+          "name": "color",
+          "value": "$color",
+          "isList": false
+        },
+        {
+          "id": "c8847a53-f66b-48a7-841a-3490e9b4ee96",
+          "required": false,
+          "dataType": "@device-name",
+          "name": "device-name",
+          "value": "$device-name",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What do you want to find, again?"
+            },
+            {
+              "lang": "en",
+              "value": "I didn\u0027t quite get what you want to find?"
+            },
+            {
+              "lang": "en",
+              "value": "can you say the appliance name, again?"
+            }
+          ],
+          "defaultValue": "device",
+          "isList": false
+        },
+        {
+          "id": "815ebbc9-fa1c-4fc7-a1e6-cb3dc3d51707",
+          "required": false,
+          "dataType": "@sys.location",
+          "name": "location",
+          "value": "$location",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Ah, the $device-name is on 2nd floor at the aware home.",
+            "hmm... the $device-name was at technology square research building at room 2331.",
+            "Oh, the $device-name is at College of Computing in room 213.",
+            "Sorry, I can\u0027t seem to find the $device-name"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522082644,
+  "fallbackIntent": false,
+  "events": []
+}

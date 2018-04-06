@@ -1,0 +1,80 @@
+{
+  "id": "8106fcf0-a124-4737-b7e5-ed8c3ed2b489",
+  "name": "know-more",
+  "auto": true,
+  "contexts": [
+    "name-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "#device.name",
+      "affectedContexts": [
+        {
+          "name": "name-followup",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "c77fdb42-c8d2-4450-ad55-7497bc73bc9d",
+          "required": false,
+          "dataType": "@action",
+          "name": "action",
+          "value": "$action",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "hmm.. can you say that again?"
+            },
+            {
+              "lang": "en",
+              "value": "I didn\u0027t quite get that."
+            },
+            {
+              "lang": "en",
+              "value": "What?"
+            }
+          ],
+          "isList": true
+        },
+        {
+          "id": "27e53ecb-483d-4c94-96f9-14f01dc43c6d",
+          "required": false,
+          "dataType": "@device-name",
+          "name": "device-name",
+          "value": "$device-name",
+          "prompts": [],
+          "defaultValue": "#name-followup.device-name",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "hmm.. so Alice $action the $device-name there at 2pm yesterday.",
+            "Bob $action the $device-name last and it has been lying there since 6 days!",
+            "I saw Charlie $action the $device-name today morning at 9am.",
+            "So Jane $action the $device-name last night at 10pm.",
+            "Frank $action the $device-name there 30 minutes ago.",
+            "hmm.. so Olivia left the $device-name there at 2pm yesterday.",
+            "Victor left the $device-name last and it has been lying there since 6 days!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522081770,
+  "fallbackIntent": false,
+  "events": []
+}
