@@ -17,7 +17,7 @@ def get_location(device_name, family_name='ctxmgmt'):
 
   try:
     resp = requests.get(url)
-    resp = json.loads(resp.content)
+    resp = json.loads(resp.text)
 
     if not resp['success']:
       out['message'] = 'Unable to get data from Find3: {:s}'. \
@@ -46,6 +46,9 @@ if __name__ == '__main__':
   import time
   while True:
     out = get_location('rpi')
-    print('rpi is at {:s} ({:d}% confident)'.format(out['loc'],
-                                                       int(float(out['prob']*100))))
+    if out['message'] != 'ok':
+      print('Error: {:s}'.format(out['message']))
+    else:
+      print('rpi is at {:s} ({:d}% confident)'.format(out['loc'],
+                                                      int(float(out['prob']*100))))
     time.sleep(10)
