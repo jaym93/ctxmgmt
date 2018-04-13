@@ -22,11 +22,12 @@ def get_location(device_name, family_name='ctxmgmt'):
     if not resp['success']:
       out['message'] = 'Unable to get data from Find3: {:s}'. \
         format(resp['message'])
-
-    out['device_name'] = device_name
-    out['family_name'] = family_name
-    for k,v in resp['data'].items():
-      out[k] = v
+    else:
+      out['message'] = resp['message']
+      out['device_name'] = device_name
+      out['family_name'] = family_name
+      for k,v in resp['data'].items():
+        out[k] = v
 
   except ConnectionError as e:
     out['message'] = 'Connection error: {:s}'.format(e)
