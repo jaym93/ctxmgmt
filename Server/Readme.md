@@ -14,13 +14,17 @@ BODY:
   },
   "sno": "20",
   "what": "Samsung TV Remote",
-  "when": "2018-03-18 10:45:13",
+  "when": "3/19/2018 12:11:04 PM",
   "where": {
-    "location": "1st floor",
+    "location": "1st floor of Aware Home",
     "streetAddress": "479 10th Street NW"
   },
   "who": "Adam"
 }
 ```
 
-All keys must be String except, `meta` and `where` which are a sub-map. `meta` is designed to handle any random sub-JSON but `where` MUST have similar sub-json
+All keys must be String except, `meta` and `where` which are a sub-map. 
+
+- `meta` is designed to handle any random sub-JSON but the formatting goes in style "`what` has `attribute value` `attribute` and " so make sure to format the input accordingly.
+
+- `where` MUST have similar sub-json with time formatted exactly like `3/19/2018 12:11:04 PM`
