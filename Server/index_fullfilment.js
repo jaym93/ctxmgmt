@@ -18,7 +18,9 @@ exports.handler = function(event, context, callback) {
 
     var params = {
         TableName : "use-logger",
-        FilterExpression:'what = :what',
+      //  KeyConditionExpression: "contains(what, :what)",
+      //  FilterExpression:'what = :what',
+        FilterExpression: "contains(what, :what)",
         ExpressionAttributeValues:{ ":what" : what.toLowerCase() }
     };
 
@@ -45,7 +47,7 @@ exports.handler = function(event, context, callback) {
 
               if (intentType == "search_device") {
                 // processed result for Search Devices Intent (What / Where)
-                let response = "I found the " + objects[0].what + " at " + objects[0].location + ". Let me know if you need more informatiion.";
+                let response = "I found the " + objects[0].what + " at " + objects[0].location + ". Let me know if you need more information.";
                 let response2 = "Oh, the " + objects[0].what + " is at " + objects[0].location + ".";
                 chosenValue = Math.random() < 0.5 ? response : response2;
               } else if ( intentType == "know-more") {
@@ -60,7 +62,7 @@ exports.handler = function(event, context, callback) {
               } else if ( intentType == "meta-info") {
                 // processed result for how intent (i.e. any other meta info I might have)
                 var info = "";
-
+                
                 for (var key in objects[0].meta) {
                   info += objects[0].meta[key] + " " + key;
                   info += " and ";
