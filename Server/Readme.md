@@ -25,9 +25,16 @@ BODY:
 
 All keys must be String except, `meta` and `where` which are a sub-map. 
 
+- `name` must be lowercased
+
+- `when` MUST have similar sub-json with time formatted exactly like `3/19/2018 12:11:04 PM`
+
+- `sno` MUST be a unique integer
+
+- `where` must have sub json with attribute `location` with complete localized information.
+
 - `meta` is designed to handle any random sub-JSON but the formatting goes in style "`what` has `attribute value` `attribute` and " so make sure to format the input accordingly.
 
-- `where` MUST have similar sub-json with time formatted exactly like `3/19/2018 12:11:04 PM`
 
 
 ## `POST` WebHook Fullfilment used by DialogFlow (for reference)
