@@ -25,7 +25,7 @@ BODY:
 
 All keys must be String except, `meta` and `where` which are a sub-map. 
 
-- `name` must be lowercased
+- `what` must be lowercased
 
 - `when` MUST have similar sub-json with time formatted exactly like `3/19/2018 12:11:04 PM`
 
