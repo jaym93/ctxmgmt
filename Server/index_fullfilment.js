@@ -18,8 +18,6 @@ exports.handler = function(event, context, callback) {
 
     var params = {
         TableName : "use-logger",
-      //  KeyConditionExpression: "contains(what, :what)",
-      //  FilterExpression:'what = :what',
         FilterExpression: "contains(what, :what)",
         ExpressionAttributeValues:{ ":what" : what.toLowerCase() }
     };
@@ -76,7 +74,9 @@ exports.handler = function(event, context, callback) {
 
               callback(null, {"speech": chosenValue,
                   "displayText": chosenValue,
-                  "data": {},
+                  "data": {"slack": {
+      "text": chosenValue
+    }},
                   "source": "AWS",
                   "contextOut": [{"device-name": objects[0].what}],
               });
