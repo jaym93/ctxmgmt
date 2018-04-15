@@ -2,6 +2,7 @@ import json
 import requests
 
 base_url = 'https://cloud.internalpositioning.com/api/v1'
+ip_url = 'https://ipinfo.io/json'
 
 def get_location(device_name, family_name='ctxmgmt'):
   """
@@ -16,6 +17,10 @@ def get_location(device_name, family_name='ctxmgmt'):
   out = {}
 
   try:
+    locateip = requests.get(ip_url)
+    out['latlong'] = json.loads(locateip.text)['loc']
+
+
     resp = requests.get(url)
     resp = json.loads(resp.text)
 
