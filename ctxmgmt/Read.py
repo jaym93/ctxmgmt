@@ -26,7 +26,7 @@ while True:
         packet['who'] = text.strip()
         location = get_location('rpi')
         if location['message'] == 'ok':
-            packet['where'] = location['loc']
+            packet['where'] = {'location':location['loc']+' at Aware Home', 'latlong':location['latlong']}
         else:
             packet['where'] = "unknown location"
         packet['sno'] = str(time.time())
